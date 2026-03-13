@@ -18,6 +18,7 @@ author: Lucas Ketels
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
+theme: minima
 
 navbar-links:
   About Me: "aboutme"

@@ -3,3 +3,33 @@
 ---
 
 @import "minima";
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.home-text {
+  flex: 1;
+}
+
+.home-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* makes it round */
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-image img {
+    width: 150px;
+    height: 150px;
+  }
+}

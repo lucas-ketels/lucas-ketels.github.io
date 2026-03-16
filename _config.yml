@@ -18,15 +18,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Easy Jekyll Starter
-email: matt@matthewwang.me
-description: >- # this means to ignore newlines until "baseurl:"
-  🧪A (lightly) opinionated Jekyll starter designed to replace jekyll new. Ejects minima out of its gem theme, adds template code for Travis CI build, test, and deploy.
-baseurl: "/easy-jekyll-starter" # the subpath of your site, e.g. /blog
-url: "https://malsf21.github.io/easy-jekyll-starter" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: malsf21
-github_username:  malsf21
-
+title: Lucas Ketels
+email: ketels[at]lpsm.com
+author: Lucas Ketels
+# description: >- # this means to ignore newlines until "baseurl:"
+  # 🧪A (lightly) opinionated Jekyll starter designed to replace jekyll new. Ejects minima out of its gem theme, adds template code for Travis CI build, test, and deploy.
+# baseurl: "/easy-jekyll-starter" # the subpath of your site, e.g. /blog
+url: "https://github.com/soljenitsyne" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: malsf21
+github_username:  soljenitsyne
+scholar_username: Lucas Ketels
+orcid_username: Lucas Ketels
+# pinterest_username: lk
 # Build settings
 plugins:
   - jekyll-feed

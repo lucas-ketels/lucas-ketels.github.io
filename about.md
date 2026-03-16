@@ -1,8 +1,8 @@
----
+<!-- ---
 layout: page
 title: About
 permalink: /about/
----
+--- -->
 
 This is `easy-jekyll-starter`, which is essentially the base Jekyll theme ([minima](https://github.com/jekyll/minima)), but ejected out of its gem + a Travis CI template.
 

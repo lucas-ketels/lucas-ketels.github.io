@@ -13,7 +13,7 @@ source "https://rubygems.org"
 gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.17"
+  gem "jekyll-feed"
   gem "jekyll-seo-tag"
 end
 
@@ -21,7 +21,7 @@ end
 # These gems can be used to run tests on your outputted code. By default, none are run, but you can edit .travis.yml to see it in action.
 group :test do
   gem 'rake'
-  gem 'html-proofer'
+  # gem 'html-proofer'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,0 +1,39 @@
+---
+layout: page
+title: Publications
+---
+{% assign publications = site.publications | sort: "year" | reverse %}
+{% for pub in publications %}
+<div class="pubitem">
+  <div class="pubteaser">
+    <a href="{{ pub.url }}">
+      <img
+        src="/assets/images/publications/{{ pub.slug }}_small.png"
+        alt="{{ pub.slug }} teaser"
+      />
+    </a>
+  </div>
+  <div class="pubcontent">
+    <div class="pubtitle">{{ pub.title }}</div>
+    <div class="pubauthors">
+      {% for author in pub.authors %}
+        <a href="{{ author.url }}">{{ author.name }}</a>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </div>
+    <div class="pubinfo">{{ pub.publication }}, {{ pub.year }}</div>
+    <div class="publinks">
+      <a class="pubbtn" href="{{ pub.arxiv }}" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>arxiv
+      </a>
+      <button class="pubbtn" onclick="pubToggle(this, 'abs-{{ pub.slug }}', 'bib-{{ pub.slug }}')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>abstract
+      </button>
+      <button class="pubbtn" onclick="pubToggle(this, 'bib-{{ pub.slug }}', 'abs-{{ pub.slug }}')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>cite
+      </button>
+    </div>
+    <div class="pubcollapse" id="abs-{{ pub.slug }}">{{ pub.abstract }}</div>
+    <div class="pubcollapse pubcollapse--bib" id="bib-{{ pub.slug }}"><pre>{{ pub.bibtex }}</pre></div>
+  </div>
+</div>
+{% endfor %}

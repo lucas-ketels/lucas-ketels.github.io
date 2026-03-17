@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
   {%- include head.html -%}
 
+  <script>
+    function pubToggle(btn, showId, hideId) {
+      const show = document.getElementById(showId);
+      const hide = document.getElementById(hideId);
+      const card = btn.closest('.pubitem');
+      const isOpen = show.classList.contains('open');
+      hide.classList.remove('open');
+      card.querySelectorAll('.pubbtn').forEach(b => {
+        if (b !== btn) b.classList.remove('active');
+      });
+      show.classList.toggle('open', !isOpen);
+      btn.classList.toggle('active', !isOpen);
+    }
+  </script>
+  
   <body>
 
     {%- include header.html -%}

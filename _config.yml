@@ -56,3 +56,8 @@ plugins:
 
 exclude:
   - README.md
+
+collections:
+  publications:
+    output: true
+    permalink: /:collection/:name

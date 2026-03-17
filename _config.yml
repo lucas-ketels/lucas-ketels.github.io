@@ -61,3 +61,4 @@ collections:
   publications:
     output: true
     permalink: /:collection/:name
+    

@@ -56,9 +56,13 @@ plugins:
 
 exclude:
   - README.md
+  - vendor
+  - vendor/bundle
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
 
 collections:
   publications:
     output: true
     permalink: /:collection/:name
-    
